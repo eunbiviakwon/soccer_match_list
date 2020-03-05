@@ -1,16 +1,18 @@
-import React, { Component } from 'react';
-import Calendar from './Calendar';
-import League from './League';
+import React, { Component } from "react";
+import Calendar from "./Calendar";
+import League from "./League";
 
 class MatchFinder extends Component {
-	render() {
-		return (
-			<div>
-				<League />
-				<Calendar />
-			</div>
-		);
-	}
+  render() {
+    const { setRange } = this.props;
+
+    return (
+      <div>
+        <League />
+        <Calendar setRange={setRange} />
+      </div>
+    );
+  }
 }
 
 export default MatchFinder;
